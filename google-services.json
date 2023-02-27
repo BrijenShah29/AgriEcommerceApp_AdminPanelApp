@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "823556131786",
+    "project_id": "agriappcapstoneproject",
+    "storage_bucket": "agriappcapstoneproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:823556131786:android:bd88c1cbb82de7e1fb1d33",
+        "android_client_info": {
+          "package_name": "com.example.agriappadminpanel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "823556131786-t1jbg1ljlgofhr1uv0i8bldo2trag9du.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnpM-1aLlKVTE1l6lmkji61j8pbXXoPKA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "823556131786-t1jbg1ljlgofhr1uv0i8bldo2trag9du.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:823556131786:android:d496447a98b462fafb1d33",
+        "android_client_info": {
+          "package_name": "com.example.mapd726_groupproject_team3_agriapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "823556131786-t1jbg1ljlgofhr1uv0i8bldo2trag9du.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnpM-1aLlKVTE1l6lmkji61j8pbXXoPKA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "823556131786-t1jbg1ljlgofhr1uv0i8bldo2trag9du.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

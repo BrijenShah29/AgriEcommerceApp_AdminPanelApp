@@ -149,19 +149,21 @@ class SubCategoryFragment : Fragment() {
 
     private fun storeDataToFirebase(subCategoryName: String, url:String) {
 
-        var db = Firebase.firestore
+        var db = Firebase.firestore.collection("SubCategories")
+        val key = db.document().id
 
         //val data = hashMapOf<String,Any>(
         //    "SubCategory" to subCategoryName,
         //    "Image" to url )
 
         val data2 = SubCategoryModel(
+            key,
             rootCategoryList[binding.rootCategoryDropdown.selectedItemPosition],
             subCategoryName,
             categoryList[binding.productCategoryDropdown.selectedItemPosition],
             url
         )
-        db.collection("SubCategories").add(data2)
+        db.add(data2)
             .addOnSuccessListener{
                 dialog.dismiss()
                 binding.imageView.setImageDrawable(resources.getDrawable(R.drawable.preview))

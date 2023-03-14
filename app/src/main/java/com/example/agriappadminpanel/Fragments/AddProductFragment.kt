@@ -190,7 +190,7 @@ class AddProductFragment : Fragment() {
                 binding.progressBar3.visibility = INVISIBLE
                 Toast.makeText(requireContext(), "Something went wrong with Storage.", Toast.LENGTH_SHORT).show()
             }
-    }
+        }
     }
 
     private fun storeDataToFirebase() {

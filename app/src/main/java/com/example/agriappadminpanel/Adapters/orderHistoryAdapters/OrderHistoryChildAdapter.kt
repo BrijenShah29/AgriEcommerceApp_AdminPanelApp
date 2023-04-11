@@ -23,7 +23,6 @@ class OrderHistoryChildAdapter(val context : Context, private val childList: Arr
 
         val view = LayoutOrderedProductsHistoryBinding.inflate(LayoutInflater.from(parent.context),parent,false)
 
-           // LayoutInflater.from(parent.context).inflate(R.layout.layout_ordered_products_history, parent, false)
         return  OrderHistoryChildViewHolder(view)
     }
 

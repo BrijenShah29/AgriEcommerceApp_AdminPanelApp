@@ -1,9 +1,5 @@
 package com.example.agriappadminpanel.Model
 
-
-import com.example.agriappadminpanel.Model.OrderedProductsModel
-
-
 data class OrderModel(
     val orderId : String?= "",
     val customerId : String?="",

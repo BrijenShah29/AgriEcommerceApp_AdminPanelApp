@@ -152,10 +152,6 @@ class SubCategoryFragment : Fragment() {
         var db = Firebase.firestore.collection("SubCategories")
         val key = db.document().id
 
-        //val data = hashMapOf<String,Any>(
-        //    "SubCategory" to subCategoryName,
-        //    "Image" to url )
-
         val data2 = SubCategoryModel(
             key,
             rootCategoryList[binding.rootCategoryDropdown.selectedItemPosition],
@@ -188,7 +184,6 @@ class SubCategoryFragment : Fragment() {
                 for(doc in it.documents){
                     val firebaseData = doc.toObject(SubCategoryModel::class.java)
                     list.add(firebaseData!!)
-                    //Log.d("Fetched category", firebaseData.Category.toString())
                 }
                 binding.categoryRecycler.adapter = SubCategoryAdapter(requireContext(),list)
             }

@@ -25,7 +25,6 @@ class OrderHistoryParentAdapter(val context : Context, private val parentList: A
         {
             binding.orderId.text =" Order Id : " + parentModel.orderId.toString()
             binding.orderTotal.text = "Total Payment : " + parentModel.orderAmount.toString()
-            // Date is pending
             val dateFormat = SimpleDateFormat("MM-dd-yyyy hh:mm", Locale.getDefault())
             if(parentModel.orderedDate!=null){
                 val date = dateFormat.format(Date(parentModel.orderedDate))

@@ -39,7 +39,8 @@ class HomeFragment : Fragment() {
         }
 
         binding.button4.setOnClickListener{
-            startActivity(Intent(requireContext().applicationContext, AllOrderActivity::class.java))
+          //  startActivity(Intent(requireContext().applicationContext, AllOrderActivity::class.java))
+            findNavController().navigate(R.id.action_homeFragment_to_orderFragment)
         }
         binding.button5.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_addSubCategoryFragment)

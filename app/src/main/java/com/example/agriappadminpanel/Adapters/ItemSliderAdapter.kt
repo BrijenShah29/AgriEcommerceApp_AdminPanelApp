@@ -7,8 +7,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.agriappadminpanel.databinding.ImageItemBinding
 import com.example.agriappadminpanel.databinding.ItemSliderLayoutBinding
+import com.google.firebase.firestore.CollectionReference
 
-class ItemSliderAdapter(var context: Context, var list : ArrayList<String>) : RecyclerView.Adapter<ItemSliderAdapter.SliderImageViewHolder>() {
+class ItemSliderAdapter(var context: Context, var list: ArrayList<String>, val db: CollectionReference) : RecyclerView.Adapter<ItemSliderAdapter.SliderImageViewHolder>() {
 
     inner class SliderImageViewHolder(var binding : ItemSliderLayoutBinding) : RecyclerView.ViewHolder(binding.root)
 

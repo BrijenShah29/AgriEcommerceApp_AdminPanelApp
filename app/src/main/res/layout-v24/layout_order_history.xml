@@ -1,0 +1,107 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Order ID -->
+    <TextView
+        android:id="@+id/order_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Order ID: #123456"/>
+
+    <!-- Order date and status -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/order_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Order Date: 2023-04-03 10:00 AM"/>
+
+        <TextView
+            android:id="@+id/order_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order Status: Shipped"/>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/orderVisibility"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_arrow_drop_down_24"
+        android:backgroundTint="@null"
+        android:background="@null"
+        android:layout_marginTop="16dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/order_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/layout_ordered_products_history"
+        />
+
+    <TextView
+        android:id="@+id/order_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Total: $50.00"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/ProceedButton"
+            android:layout_width="0dp"
+            android:pointerIcon="arrow"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/login"
+            android:backgroundTint="@null"
+            android:gravity="center"
+            android:text="Proceed"
+            android:textAllCaps="false"
+            android:textColor="@color/forIcons"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:iconTint="@null" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/CancelButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center|start"
+            android:gravity="center"
+            android:text="Cancel"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/multiply"
+            android:textSize="18sp"
+            android:textColor="@color/purple_200"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black" />
+
+</LinearLayout>

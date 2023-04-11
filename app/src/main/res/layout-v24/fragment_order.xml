@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.OrderFragment">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My Orders"
+            android:textSize="20sp"
+            android:padding="16dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/order_list"
+            android:layout_width="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/layout_order_history"
+            android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:drawableStart="@drawable/work_process"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/login"
+            android:backgroundTint="@null"
+            android:gravity="center"
+            android:text="Proceed"
+            android:textAllCaps="false"
+            android:textColor="@color/forIcons"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:iconTint="@null" />
+        <View
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:layout_weight="0"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:text="Cancel"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/multiply"
+            android:textSize="18sp"
+            android:textColor="@color/purple_200"/>
+    </LinearLayout>
+    </LinearLayout>

@@ -9,15 +9,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import com.example.agriappadminpanel.Adapters.ItemSliderAdapter
-import com.example.agriappadminpanel.Model.CategoryModel
 import com.example.agriappadminpanel.R
 import com.example.agriappadminpanel.databinding.FragmentSliderBinding
 import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import java.util.*
@@ -82,14 +79,16 @@ class SliderFragment : Fragment() {
     private fun getSliderImages() {
             sliderImageList = ArrayList()
             sliderImageList.clear()
-            Firebase.firestore.collection("Slider").get().addOnSuccessListener {
+        val db = Firebase.firestore.collection("Slider")
+            db.get().addOnSuccessListener {
                 sliderImageList.clear()
                 for(doc in it.documents){
                     val data = doc.data!!["img"].toString()
                     sliderImageList.add(data!!)
                 }
-                val sliderAdapter = ItemSliderAdapter(requireContext(),sliderImageList)
+                val sliderAdapter = ItemSliderAdapter(requireContext(),sliderImageList,db)
                 binding.sliderRecycler.adapter = sliderAdapter
+                sliderAdapter.notifyDataSetChanged()
             }
     }
 
